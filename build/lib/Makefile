@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles /home/rajasinghe/fosssy/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/rajasinghe/fosssy/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles /home/rajasinghe/fosssy/build/lib//CMakeFiles/progress.marks
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rajasinghe/fosssy/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named fosssyc
+# Convenience name for target.
+lib/CMakeFiles/libfosssyc.dir/rule:
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/libfosssyc.dir/rule
+.PHONY : lib/CMakeFiles/libfosssyc.dir/rule
 
-# Build rule for target.
-fosssyc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fosssyc
-.PHONY : fosssyc
-
-# fast build rule for target.
-fosssyc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/build
-.PHONY : fosssyc/fast
-
-#=============================================================================
-# Target rules for targets named libfosssyc
-
-# Build rule for target.
-libfosssyc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libfosssyc
+# Convenience name for target.
+libfosssyc: lib/CMakeFiles/libfosssyc.dir/rule
 .PHONY : libfosssyc
 
 # fast build rule for target.
 libfosssyc/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/build
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/build
 .PHONY : libfosssyc/fast
 
-src/driver.o: src/driver.c.o
-.PHONY : src/driver.o
+context.o: context.c.o
+.PHONY : context.o
 
 # target to build an object file
-src/driver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/src/driver.c.o
-.PHONY : src/driver.c.o
+context.c.o:
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/context.c.o
+.PHONY : context.c.o
 
-src/driver.i: src/driver.c.i
-.PHONY : src/driver.i
+context.i: context.c.i
+.PHONY : context.i
 
 # target to preprocess a source file
-src/driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/src/driver.c.i
-.PHONY : src/driver.c.i
+context.c.i:
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/context.c.i
+.PHONY : context.c.i
 
-src/driver.s: src/driver.c.s
-.PHONY : src/driver.s
+context.s: context.c.s
+.PHONY : context.s
 
 # target to generate assembly for a file
-src/driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/src/driver.c.s
-.PHONY : src/driver.c.s
+context.c.s:
+	cd /home/rajasinghe/fosssy/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/context.c.s
+.PHONY : context.c.s
 
 # Help Target
 help:
@@ -174,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... fosssyc"
 	@echo "... libfosssyc"
-	@echo "... src/driver.o"
-	@echo "... src/driver.i"
-	@echo "... src/driver.s"
+	@echo "... context.o"
+	@echo "... context.i"
+	@echo "... context.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rajasinghe/fosssy/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

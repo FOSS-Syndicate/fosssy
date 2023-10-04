@@ -19,5 +19,8 @@ else()
 	add_link_options(-fsanitize=address)
 endif()
 
+add_subdirectory(lib)
+
 add_executable(fosssyc "${PROJECT_SOURCE_DIR}/src/driver.c")
+target_link_libraries(fosssyc libfosssyc)
 target_include_directories(fosssyc PUBLIC "${PROJECT_SOURCE_DIR}/include")

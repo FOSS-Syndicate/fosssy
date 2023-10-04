@@ -1,1 +1,1 @@
-/usr/bin/cc -fsanitize=address CMakeFiles/fosssyc.dir/src/driver.c.o -o fosssyc 
+/usr/bin/cc -fsanitize=address CMakeFiles/fosssyc.dir/src/driver.c.o -o fosssyc  lib/liblibfosssyc.a 

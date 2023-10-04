@@ -8,12 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rajasinghe/fosssy/src/driver.c" "CMakeFiles/fosssyc.dir/src/driver.c.o" "gcc" "CMakeFiles/fosssyc.dir/src/driver.c.o.d"
+  "/home/rajasinghe/fosssy/lib/context.c" "lib/CMakeFiles/libfosssyc.dir/context.c.o" "gcc" "lib/CMakeFiles/libfosssyc.dir/context.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rajasinghe/fosssy/build/lib/CMakeFiles/libfosssyc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

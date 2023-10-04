@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibfosssyc.a CMakeFiles/libfosssyc.dir/context.c.o
+/usr/bin/ranlib liblibfosssyc.a

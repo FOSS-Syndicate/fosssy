@@ -1,3 +1,6 @@
 /home/rajasinghe/fosssy/build/CMakeFiles/fosssyc.dir
 /home/rajasinghe/fosssy/build/CMakeFiles/edit_cache.dir
 /home/rajasinghe/fosssy/build/CMakeFiles/rebuild_cache.dir
+/home/rajasinghe/fosssy/build/lib/CMakeFiles/libfosssyc.dir
+/home/rajasinghe/fosssy/build/lib/CMakeFiles/edit_cache.dir
+/home/rajasinghe/fosssy/build/lib/CMakeFiles/rebuild_cache.dir

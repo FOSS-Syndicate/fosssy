@@ -92,6 +92,7 @@ fosssyc_EXTERNAL_OBJECTS =
 
 fosssyc: CMakeFiles/fosssyc.dir/src/driver.c.o
 fosssyc: CMakeFiles/fosssyc.dir/build.make
+fosssyc: lib/liblibfosssyc.a
 fosssyc: CMakeFiles/fosssyc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rajasinghe/fosssy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable fosssyc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fosssyc.dir/link.txt --verbose=$(VERBOSE)

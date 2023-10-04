@@ -1,5 +1,5 @@
-#ifndef FOSSSYC_C_TOKEN_H
-#define FOSSSYC_C_TOKEN_H
+#ifndef FOSSSYC_STDIO_H
+#define FOSSSYC_STDIO_H
 
 int printf(const char* format, ...);
 

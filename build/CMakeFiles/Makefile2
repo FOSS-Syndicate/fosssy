@@ -64,21 +64,38 @@ CMAKE_BINARY_DIR = /home/rajasinghe/fosssy/build
 
 # The main recursive "all" target.
 all: CMakeFiles/fosssyc.dir/all
+all: lib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/fosssyc.dir/clean
+clean: lib/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib
+
+# Recursive "all" directory target.
+lib/all: lib/CMakeFiles/libfosssyc.dir/all
+.PHONY : lib/all
+
+# Recursive "preinstall" directory target.
+lib/preinstall:
+.PHONY : lib/preinstall
+
+# Recursive "clean" directory target.
+lib/clean: lib/CMakeFiles/libfosssyc.dir/clean
+.PHONY : lib/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/fosssyc.dir
 
 # All Build rule for target.
-CMakeFiles/fosssyc.dir/all:
+CMakeFiles/fosssyc.dir/all: lib/CMakeFiles/libfosssyc.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rajasinghe/fosssy/build/CMakeFiles --progress-num=1,2 "Built target fosssyc"
@@ -86,7 +103,7 @@ CMakeFiles/fosssyc.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fosssyc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fosssyc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 0
 .PHONY : CMakeFiles/fosssyc.dir/rule
@@ -99,6 +116,32 @@ fosssyc: CMakeFiles/fosssyc.dir/rule
 CMakeFiles/fosssyc.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fosssyc.dir/build.make CMakeFiles/fosssyc.dir/clean
 .PHONY : CMakeFiles/fosssyc.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/libfosssyc.dir
+
+# All Build rule for target.
+lib/CMakeFiles/libfosssyc.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rajasinghe/fosssy/build/CMakeFiles --progress-num=3,4 "Built target libfosssyc"
+.PHONY : lib/CMakeFiles/libfosssyc.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/libfosssyc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/libfosssyc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rajasinghe/fosssy/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/libfosssyc.dir/rule
+
+# Convenience name for target.
+libfosssyc: lib/CMakeFiles/libfosssyc.dir/rule
+.PHONY : libfosssyc
+
+# clean rule for target.
+lib/CMakeFiles/libfosssyc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/libfosssyc.dir/build.make lib/CMakeFiles/libfosssyc.dir/clean
+.PHONY : lib/CMakeFiles/libfosssyc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
